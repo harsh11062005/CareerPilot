@@ -1,0 +1,58 @@
+John Doe
+Senior AI Engineer | 8+ Years of Experience
+john.doe@email.com | (555) 123-4567 | San Francisco, CA
+
+PROFESSIONAL SUMMARY
+Experienced AI Engineer with expertise in machine learning, natural language processing, and agentic systems. Proven track record in developing scalable AI solutions and leading technical teams. Passionate about building innovative AI products that solve real-world problems.
+
+TECHNICAL SKILLS
+Programming Languages: Python, JavaScript, Java, C++, R
+AI/ML Frameworks: TensorFlow, PyTorch, Hugging Face, LangChain, CrewAI
+Cloud Platforms: AWS (SageMaker, Lambda, EC2), Google Cloud (Vertex AI)
+Databases: PostgreSQL, MongoDB, Redis, Vector databases (ChromaDB, FAISS)
+Tools & Technologies: Docker, Kubernetes, Git, CI/CD, REST APIs, GraphQL
+
+PROFESSIONAL EXPERIENCE
+
+Senior AI Engineer | TechCorp Inc. | 2021 - Present
+• Led development of multi-agent AI system using CrewAI framework, improving task automation by 60%
+• Built RAG pipeline for document processing using ChromaDB and sentence transformers
+• Implemented real-time recommendation engine serving 1M+ users with 95% accuracy
+• Mentored 5 junior engineers and established AI engineering best practices
+• Reduced model deployment time from weeks to days using MLOps pipelines
+
+AI Engineer | InnovateAI | 2019 - 2021
+• Developed NLP models for text classification and sentiment analysis
+• Built automated data processing pipeline handling 10TB+ daily data
+• Collaborated with product team to integrate AI features into customer-facing applications
+• Optimized model performance resulting in 40% reduction in inference time
+
+Software Engineer | StartupXYZ | 2018 - 2019
+• Built full-stack web applications using Python Django and React
+• Implemented REST APIs and microservices architecture
+• Worked with PostgreSQL and Redis for data storage and caching
+
+EDUCATION
+Master of Science in Computer Science | Stanford University | 2016 - 2018
+Bachelor of Science in Software Engineering | UC Berkeley | 2012 - 2016
+GPA: 3.8/4.0
+
+PROJECTS
+AI Career Assistant System (2024)
+• Built multi-agent system for career guidance using CrewAI and LangGraph
+• Integrated RAG pipeline for CV analysis and interview preparation
+• Deployed using FastAPI and Docker containers
+
+Real-time Chatbot Platform (2023)
+• Developed conversational AI using transformer models and vector databases
+• Achieved 90% user satisfaction rating with natural language understanding
+• Handled 10,000+ concurrent conversations with sub-second response time
+
+PUBLICATIONS
+"Multi-Agent Systems for Automated Workflows" - AI Conference 2023
+"RAG Pipeline Optimization for Document Processing" - ML Journal 2022
+
+CERTIFICATIONS
+AWS Certified Machine Learning Specialty
+Google Cloud Professional ML Engineer
+Certified Kubernetes Administrator (CKA)

@@ -1,0 +1,168 @@
+[
+  {
+    "id": 1,
+    "title": "Senior AI/ML Engineer",
+    "company": "TechCorp",
+    "location": "San Francisco, CA",
+    "salary_range": "$150,000 - $200,000",
+    "description": "Lead the development of cutting-edge AI/ML solutions for enterprise clients. Work with large-scale data processing and deep learning models.",
+    "requirements": [
+      "5+ years Python experience",
+      "Deep learning frameworks (TensorFlow, PyTorch)",
+      "Cloud platforms (AWS, GCP, Azure)",
+      "Machine learning algorithms",
+      "Team leadership experience"
+    ],
+    "skills": [
+      "python",
+      "tensorflow",
+      "pytorch",
+      "aws",
+      "machine learning",
+      "deep learning",
+      "team leadership"
+    ],
+    "industry": "Technology",
+    "experience_level": "Senior",
+    "growth_potential": "High - AI/ML field expanding rapidly",
+    "industry_trend": "Growing demand for AI specialists"
+  },
+  {
+    "id": 2,
+    "title": "Data Scientist",
+    "company": "DataFlow Inc",
+    "location": "New York, NY",
+    "salary_range": "$120,000 - $160,000",
+    "description": "Analyze complex datasets to drive business decisions. Build predictive models and statistical analyses.",
+    "requirements": [
+      "3+ years data science experience",
+      "Python, R, SQL proficiency",
+      "Statistical modeling",
+      "Data visualization tools",
+      "Business acumen"
+    ],
+    "skills": [
+      "python",
+      "r",
+      "sql",
+      "statistics",
+      "data analysis",
+      "machine learning",
+      "business intelligence"
+    ],
+    "industry": "Technology",
+    "experience_level": "Mid",
+    "growth_potential": "High - Data-driven decisions crucial",
+    "industry_trend": "Increasing demand for data insights"
+  },
+  {
+    "id": 3,
+    "title": "Full Stack Developer",
+    "company": "WebSolutions",
+    "location": "Austin, TX",
+    "salary_range": "$90,000 - $130,000",
+    "description": "Develop end-to-end web applications using modern frameworks and cloud technologies.",
+    "requirements": [
+      "3+ years full-stack development",
+      "JavaScript, React, Node.js",
+      "Database design (SQL, NoSQL)",
+      "Cloud deployment experience",
+      "Agile methodology"
+    ],
+    "skills": [
+      "javascript",
+      "react",
+      "nodejs",
+      "sql",
+      "nosql",
+      "cloud",
+      "web development"
+    ],
+    "industry": "Technology",
+    "experience_level": "Mid",
+    "growth_potential": "Medium - Stable web development market",
+    "industry_trend": "Consistent demand for web developers"
+  },
+  {
+    "id": 4,
+    "title": "DevOps Engineer",
+    "company": "CloudScale",
+    "location": "Seattle, WA",
+    "salary_range": "$110,000 - $150,000",
+    "description": "Design and maintain scalable cloud infrastructure. Implement CI/CD pipelines and monitoring systems.",
+    "requirements": [
+      "4+ years DevOps experience",
+      "Docker, Kubernetes expertise",
+      "Cloud platforms (AWS, Azure)",
+      "Infrastructure as Code",
+      "Monitoring and logging"
+    ],
+    "skills": [
+      "docker",
+      "kubernetes",
+      "aws",
+      "azure",
+      "terraform",
+      "ci/cd",
+      "monitoring"
+    ],
+    "industry": "Technology",
+    "experience_level": "Senior",
+    "growth_potential": "High - Cloud adoption accelerating",
+    "industry_trend": "Critical for digital transformation"
+  },
+  {
+    "id": 5,
+    "title": "Product Manager",
+    "company": "InnovateCorp",
+    "location": "Boston, MA",
+    "salary_range": "$100,000 - $140,000",
+    "description": "Lead product strategy and development. Work with cross-functional teams to deliver customer-focused solutions.",
+    "requirements": [
+      "3+ years product management",
+      "Technical background preferred",
+      "Analytics and data-driven decisions",
+      "Cross-functional leadership",
+      "Market research skills"
+    ],
+    "skills": [
+      "product management",
+      "analytics",
+      "leadership",
+      "market research",
+      "strategy",
+      "technical background"
+    ],
+    "industry": "Technology",
+    "experience_level": "Mid",
+    "growth_potential": "Medium - Steady product management demand",
+    "industry_trend": "Focus on customer-centric products"
+  },
+  {
+    "id": 6,
+    "title": "Cybersecurity Analyst",
+    "company": "SecureTech",
+    "location": "Denver, CO",
+    "salary_range": "$95,000 - $135,000",
+    "description": "Protect organizational assets from cyber threats. Monitor security systems and respond to incidents.",
+    "requirements": [
+      "2+ years cybersecurity experience",
+      "Security tools and frameworks",
+      "Incident response procedures",
+      "Risk assessment skills",
+      "Certifications (CISSP, CISM preferred)"
+    ],
+    "skills": [
+      "cybersecurity",
+      "incident response",
+      "risk assessment",
+      "security tools",
+      "compliance",
+      "network security"
+    ],
+    "industry": "Technology",
+    "experience_level": "Mid",
+    "growth_potential": "Very High - Cybersecurity threats increasing",
+    "industry_trend": "Critical for all organizations"
+  }
+]

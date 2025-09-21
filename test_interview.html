@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Interview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-8">Test Interview Functionality</h1>
+        
+        <!-- Interview Status -->
+        <div class="mb-6">
+            <div class="flex justify-between text-sm text-gray-600 mb-2">
+                <span>Question <span id="questionNum">1</span> of 3</span>
+                <span id="interviewStatus">Ready to start</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2">
+                <div id="progress" class="bg-blue-600 h-2 rounded-full transition-all duration-300" style="width: 0%"></div>
+            </div>
+        </div>
+        
+        <!-- Question -->
+        <div class="bg-blue-50 rounded-lg p-6 mb-6">
+            <div class="flex items-start space-x-3">
+                <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">AI</div>
+                <div>
+                    <h4 class="font-semibold text-gray-800 mb-2">AI Coach:</h4>
+                    <p id="questionText" class="text-gray-700 text-lg">Tell me about yourself and your background in technology.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- User Answer -->
+        <div class="mb-6">
+            <label for="userAnswer" class="block text-sm font-medium text-gray-700 mb-2">Your Answer:</label>
+            <textarea id="userAnswer" rows="6" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Type your answer here..."></textarea>
+        </div>
+        
+        <!-- Action Buttons -->
+        <div class="flex justify-center">
+            <button onclick="submitAnswer()" id="submitBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors text-lg">
+                Submit Answer & Continue →
+            </button>
+        </div>
+        
+        <!-- Interview Complete -->
+        <div id="complete" class="hidden mt-6 bg-green-50 rounded-lg p-6 text-center">
+            <div class="text-green-600 text-4xl mb-4">🎉</div>
+            <h4 class="text-xl font-bold text-green-800 mb-2">Interview Complete!</h4>
+            <p class="text-green-700">Great job completing the mock interview!</p>
+        </div>
+    </div>
+
+    <script>
+    // Interview state
+    let interviewState = {
+        currentQuestion: 0,
+        answers: [],
+        isComplete: false
+    };
+
+    // Test questions
+    const questions = [
+        "Tell me about yourself and your background in technology.",
+        "Describe a challenging project you've worked on.",
+        "How do you approach problem-solving?"
+    ];
+
+    function submitAnswer() {
+        console.log('submitAnswer called'); // Debug log
+        
+        const answerElement = document.getElementById('userAnswer');
+        if (!answerElement) {
+            alert('Error: Answer field not found. Please refresh the page.');
+            return;
+        }
+        
+        const answer = answerElement.value.trim();
+        
+        if (answer === '') {
+            alert('Please provide an answer before submitting.');
+            return;
+        }
+        
+        console.log('Answer submitted:', answer); // Debug log
+        
+        // Save answer
+        interviewState.answers[interviewState.currentQuestion] = answer;
+        
+        // Show feedback
+        showFeedback(answer);
+        
+        // Move to next question after a short delay
+        setTimeout(() => {
+            nextQuestion();
+        }, 2000);
+    }
+
+    function nextQuestion() {
+        console.log('nextQuestion called'); // Debug log
+        interviewState.currentQuestion++;
+        
+        if (interviewState.currentQuestion >= questions.length) {
+            // Interview complete
+            completeInterview();
+            return;
+        }
+        
+        // Update question
+        document.getElementById('questionNum').textContent = interviewState.currentQuestion + 1;
+        document.getElementById('questionText').textContent = questions[interviewState.currentQuestion];
+        document.getElementById('userAnswer').value = '';
+        
+        // Update progress
+        const progress = ((interviewState.currentQuestion + 1) / questions.length) * 100;
+        document.getElementById('progress').style.width = progress + '%';
+        
+        // Update status
+        document.getElementById('interviewStatus').textContent = 'Answer the question above';
+        
+        // Focus on answer input
+        document.getElementById('userAnswer').focus();
+    }
+
+    function showFeedback(answer) {
+        let feedback = '';
+        let feedbackColor = 'blue';
+        
+        if (answer.length < 50) {
+            feedback = '💡 Tip: Try to provide more detail. Include specific examples and explain your thought process.';
+            feedbackColor = 'yellow';
+        } else if (answer.length < 150) {
+            feedback = '✅ Good start! Consider adding more specific examples or technical details.';
+            feedbackColor = 'blue';
+        } else {
+            feedback = '✅ Great answer length! You\'re providing good detail while staying concise.';
+            feedbackColor = 'green';
+        }
+        
+        // Show feedback temporarily
+        const feedbackDiv = document.createElement('div');
+        feedbackDiv.className = `mt-4 p-3 bg-${feedbackColor}-50 border-l-4 border-${feedbackColor}-400 rounded`;
+        feedbackDiv.innerHTML = `<p class="text-${feedbackColor}-800 text-sm">${feedback}</p>`;
+        
+        document.getElementById('submitBtn').parentNode.insertBefore(feedbackDiv, document.getElementById('submitBtn'));
+        
+        // Remove feedback after 5 seconds
+        setTimeout(() => {
+            feedbackDiv.remove();
+        }, 5000);
+    }
+
+    function completeInterview() {
+        console.log('completeInterview called'); // Debug log
+        interviewState.isComplete = true;
+        
+        // Hide interview interface
+        document.querySelector('.bg-white.rounded-lg.shadow-lg').classList.add('hidden');
+        
+        // Show completion message
+        document.getElementById('complete').classList.remove('hidden');
+        
+        // Update status
+        document.getElementById('interviewStatus').textContent = 'Interview completed successfully';
+    }
+
+    // Initialize interview
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('interviewStatus').textContent = 'Answer the question above';
+        document.getElementById('userAnswer').focus();
+        console.log('Interview initialized'); // Debug log
+    });
+    </script>
+</body>
+</html>
